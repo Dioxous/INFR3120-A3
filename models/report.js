@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 let reportModel = mongoose.Schema({
     road: String,
     type: String,
-    description: String,
     impact: String,
+    description: String,
     status: String
 },
 {
