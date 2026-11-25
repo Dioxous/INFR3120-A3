@@ -1,11 +1,19 @@
+//Loading mongodb uri from .env into process.env object
+try{
+  process.loadEnvFile();
+}
+catch(err){
+  //Empty catch block to ignore error if no .env found
+}
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('../routes/index');
+var usersRouter = require('../routes/users');
 
 var app = express();
 
